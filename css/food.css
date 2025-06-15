@@ -1,0 +1,159 @@
+/* 美食页面样式 */
+
+/* 美食导航 */
+.food-nav {
+    background-color: #f5e6d3;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.food-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.food-nav a {
+    text-decoration: none;
+    color: #8b4513;
+    font-size: 18px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.food-nav a:hover {
+    background-color: #8b4513;
+    color: #f9f6f1;
+}
+
+/* 美食内容区域 */
+.food-content {
+    padding: 60px 0;
+    background-color: #f9f6f1;
+}
+
+/* 美食分类标题 */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title .en {
+    display: block;
+    font-size: 32px;
+    color: #8b4513;
+    margin-bottom: 5px;
+}
+
+.section-title .cn {
+    display: block;
+    font-size: 24px;
+    color: #666;
+}
+
+/* 美食卡片网格 */
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+/* 美食卡片样式 */
+.food-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.food-card:hover {
+    transform: translateY(-5px);
+}
+
+.food-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.food-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.food-card:hover .food-image img {
+    transform: scale(1.05);
+}
+
+.food-info {
+    padding: 20px;
+}
+
+.food-info h3 {
+    font-size: 22px;
+    color: #8b4513;
+    margin-bottom: 10px;
+}
+
+.food-info p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* 标签样式 */
+.tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tags span {
+    background-color: #f5e6d3;
+    color: #8b4513;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+}
+
+/* 分类区域样式 */
+.food-section {
+    margin-bottom: 80px;
+}
+
+.food-section:last-child {
+    margin-bottom: 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .food-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .food-image {
+        height: 200px;
+    }
+
+    .section-title .en {
+        font-size: 24px;
+    }
+
+    .section-title .cn {
+        font-size: 18px;
+    }
+}

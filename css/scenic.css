@@ -1,0 +1,173 @@
+/* 景点页面样式 */
+
+/* 筛选器区域 */
+.filter-section {
+    background-color: #f5e6d3;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.filter-btn {
+    background: none;
+    border: 2px solid #8b4513;
+    color: #8b4513;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: #8b4513;
+    color: #f9f6f1;
+}
+
+/* 景点内容区域 */
+.scenic-content {
+    padding: 60px 0;
+    background-color: #f9f6f1;
+}
+
+/* 景点卡片样式 */
+.scenic-card {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.scenic-card:hover {
+    transform: translateY(-5px);
+}
+
+.scenic-image {
+    flex: 0 0 40%;
+    position: relative;
+}
+
+.scenic-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.scenic-tag {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(139, 69, 19, 0.9);
+    color: #f9f6f1;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 14px;
+}
+
+.scenic-info {
+    flex: 0 0 60%;
+    padding: 30px;
+}
+
+.scenic-info h2 {
+    font-size: 28px;
+    color: #8b4513;
+    margin-bottom: 15px;
+}
+
+.scenic-meta {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.scenic-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.description {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.scenic-features {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.scenic-features span {
+    background-color: #f5e6d3;
+    color: #8b4513;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 14px;
+}
+
+/* 地图区域 */
+.map-section {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.map-title {
+    text-align: center;
+    color: #8b4513;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.map-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.map-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .scenic-card {
+        flex-direction: column;
+    }
+
+    .scenic-image {
+        height: 250px;
+    }
+
+    .filter-buttons {
+        flex-wrap: wrap;
+    }
+
+    .filter-btn {
+        width: calc(50% - 10px);
+        text-align: center;
+    }
+
+    .scenic-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,112 @@
+/* 文化特色页面样式 */
+
+/* 文化特色内容样式 */
+.culture-features {
+    padding: 40px 0 80px;
+}
+
+.culture-item {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 80px;
+    align-items: center;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.culture-item:last-child {
+    margin-bottom: 0;
+}
+
+/* 交错布局 */
+.culture-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.culture-image {
+    flex: 1;
+}
+
+.culture-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.culture-image img:hover {
+    transform: scale(1.02);
+}
+
+.culture-content {
+    flex: 1;
+}
+
+.culture-content h2 {
+    font-size: 32px;
+    color: #8b4513;
+    margin-bottom: 10px;
+}
+
+.culture-content .subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.culture-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.culture-text ul {
+    list-style: none;
+}
+
+.culture-text ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    color: #555;
+}
+
+.culture-text ul li::before {
+    content: "•";
+    color: #8b4513;
+    position: absolute;
+    left: 0;
+    font-size: 20px;
+    line-height: 1;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .culture-item {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .culture-item:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .culture-image img {
+        height: 300px;
+    }
+
+    .culture-content h2 {
+        font-size: 24px;
+    }
+
+    .culture-content .subtitle {
+        font-size: 16px;
+    }
+}
