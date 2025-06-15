@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美食佳肴 - 德水·云州</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/food.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <style>
+        /* 模态框样式 */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 900px;
+            max-height: 80vh;
+            object-fit: contain;
+        }
+
+        .close {
+            position: absolute;
+            right: 35px;
+            top: 15px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 添加图片悬停效果 */
+        .food-image img {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .food-image img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部区域 -->
+  <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Logo" style="height: 50px;">
+                德水·云州
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="food.html" class="active">研学路线</a></li>
+                    <li><a href="culture.html">文创展示</a></li>
+                    <li><a href="scenic.html">德文化</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 页面标题 -->
+    <div class="page-header">
+        <div class="container">
+            <h1>研学路线</h1>
+            <p>Study Route</p>
+        </div>
+    </div>
+
+    <!-- 路线分类导航 -->
+    <div class="food-nav">
+        <div class="container">
+            <ul>
+                <li><a href="#famous-dishes">运河文化</a></li>
+                <li><a href="#seasonal-food">德文化</a></li>
+                <li><a href="#traditional-snacks">研学路线</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 路线内容区域 -->
+    <div class="food-content">
+        <div class="container">
+            <!-- 运河文化路线 -->
+            <section id="famous-dishes" class="food-section">
+                <h2 class="section-title">
+                    <span class="en">Yunhe Culture</span>
+                    <span class="cn">运河文化</span>
+                </h2>
+                <div class="food-grid">
+                    <div class="food-card">
+                        <div class="food-image">
+                            <img src="images/food-squirrel-fish.jpg" alt="">
+                        </div>
+                        <div class="food-info">
+                            <h3>历史文化路线</h3>
+                            <p>武城四女寺风景区——南运河码头遗址——北厂清仓遗址——苏禄王墓</p>
+                            <div class="tags">
+                                <span>历史文化</span>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-image">
+                            <img src="images/food-soup-dumpling.jpg" alt="">
+                        </div>
+                        <div class="food-info">
+                            <h3>运河水利文化路线</h3>
+                            <p>北厂清仓遗址——德州码头——四女寺枢纽——运河武城大桥</p>
+                            <div class="tags">
+                                <span>水利水电</span>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 德州文化路线 -->
+            <section id="seasonal-food" class="food-section">
+                <h2 class="section-title">
+                    <span class="en">De Culture</span>
+                    <span class="cn">德文化</span>
+                </h2>
+                <div class="food-grid">
+                    <div class="food-card">
+                        <div class="food-image">
+                            <img src="images/food-biluochun.jpg" alt="">
+                        </div>
+                        <div class="food-info">
+                            <h3>名人故里路线</h3>
+                            <p>德州市博物馆——东方朔墓——陵城区文博苑——刑侗墓——禹王亭遗址</p>
+                            <div class="tags">
+                                <span>东方朔</span>
+                                <span>颜真卿</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-image">
+                            <img src="images/food-mooncake.jpg" alt="">
+                        </div>
+                        <div class="food-info">
+                            <h3>运河工业遗产</h3>
+                            <p>德州电厂机房旧址——德州码头——德州仓储建筑群
+—德州一水厂旧日址-德州机床厂
+</p>
+                            <div class="tags">
+                                <span>城市发展</span>
+                                <span>传统工业</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 主题研学路线 -->
+            <section id="traditional-snacks" class="food-section">
+                <h2 class="section-title">
+                    <span class="en">Study Route</span>
+                    <span class="cn">主体研学路线</span>
+                </h2>
+                <div class="food-grid">
+                    <div class="food-card">
+                        <div class="food-image">
+                            <img src="images/food-qingtuan.jpg" alt="">
+                        </div>
+                        <div class="food-info">
+                            <h3>汉风唐韵路线</h3>
+                            <p>乐陵故城——田家汉墓——曹冢汉墓——神头墓群
+——平原郡古城遗址
+</p>
+                            <div class="tags">
+                                <span>名人故里</span>
+                              
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-image">
+                            <img src="images/food-sachima.jpg" alt="">
+                        </div>
+                        <div class="food-info">
+                            <h3>鲁边区党委成立旧址</h3>
+                            <p>中共山东分局冀鲁边区党委成立旧址-乐陵市大桑树村革命旧址群-冀鲁边区抗战遗址
+
+</p>
+                            <div class="tags">
+                                <span>红色革命</span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- 图片预览模态框 -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <!-- 底部版权 -->
+    <footer>
+        <div class="container">
+            <p> 2025 德水·云州. All Rights Reserved.</p>
+        </div>
+    </footer>
+     <script src="js/food.js"></script>
+</body>
+</html>
